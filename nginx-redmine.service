@@ -1,0 +1,18 @@
+# systemd nginx config - /lib/systemd/system/nginx.service
+# Visit to https://www.redmineup.com/pages/help/installation/installing-redmine-on-ubuntu-20-04#2-Installing-Phusion-Passenger-and-Nginx
+
+[Unit]
+Description=The NGINX HTTP and reverse proxy server
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/opt/nginx/logs/nginx.pid
+ExecStartPre=/opt/nginx/sbin/nginx -t
+ExecStart=/opt/nginx/sbin/nginx
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
