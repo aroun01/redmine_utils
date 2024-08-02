@@ -13,5 +13,6 @@
 # certbot.timer.
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+YOUR_DOMAIN=redmine.org
 
-systemctl stop nginx ; systemctl stop nginx-redmine ; certbot certonly --standalone -d YOUR_DOMAIN --non-interactive ; systemctl start nginx-redmine
+systemctl stop nginx ; systemctl stop nginx-redmine ; certbot certonly --standalone -d $YOUR_DOMAIN --non-interactive ; systemctl start nginx-redmine
