@@ -7,6 +7,8 @@ DUSER="root"
 BPATH="/home/backups"
 RMPATH="/var/www/html"
 
+###############################################
+
 #Create backup path
 mkdir -p $BPATH &> /dev/null
 
