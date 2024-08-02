@@ -1,5 +1,6 @@
-# systemd nginx config - /lib/systemd/system/nginx.service
 # Visit to https://www.redmineup.com/pages/help/installation/installing-redmine-on-ubuntu-20-04#2-Installing-Phusion-Passenger-and-Nginx
+# systemd nginx config - /lib/systemd/system/nginx.service
+
 
 [Unit]
 Description=The NGINX HTTP and reverse proxy server
